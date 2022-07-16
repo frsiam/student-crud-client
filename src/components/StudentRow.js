@@ -7,7 +7,7 @@ const StudentRow = ({ stu, index, isReload, setIsReload }) => {
     const navigate = useNavigate()
     const handleEdit = (id) => {
         console.log(id)
-        navigate(`${id}`)
+        navigate(`singleStudent/${id}`)
     }
     const handleDelete = id => {
         const isAgree = window.confirm("Are you sure ?");

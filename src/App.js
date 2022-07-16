@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Students from './components/Students';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UpdateStudent from './components/UpdateStudent';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Students />} />
         <Route path='/addnewstudentinfo' element={<AddStudent />} />
-        <Route path='/singleStudent/:id' element={<h1>single</h1>} />
+        <Route path='/singleStudent/:id' element={<UpdateStudent />} />
       </Routes>
       <ToastContainer />
     </div>
