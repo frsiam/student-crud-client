@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
 import StudentRow from './StudentRow';
 
 const Students = () => {
@@ -7,7 +8,7 @@ const Students = () => {
         fetch('http://localhost:5000/students')
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 return setStudents(data.result)
             })
     }, [])
@@ -16,10 +17,11 @@ const Students = () => {
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">S.N</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Religion</th>
+                        <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -28,6 +30,9 @@ const Students = () => {
                     }
                 </tbody>
             </table>
+            <div className='text-center mt-5'>
+                <Link to='/addnewstudentinfo' className="btn btn-dark">Add New Student</Link>
+            </div>
         </div>
     );
 };
