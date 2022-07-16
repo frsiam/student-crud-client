@@ -6,13 +6,13 @@ const Students = () => {
     const [students, setStudents] = useState([]);
     const [isReload, setIsReload] = useState(false);
     useEffect(() => {
-        fetch('http://localhost:5000/students')
+        fetch('https://arcane-thicket-42090.herokuapp.com/students')
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
                 return setStudents(data.result)
             })
-    }, [])
+    }, [isReload])
     return (
         <div className='container my-5'>
             <table className="table">

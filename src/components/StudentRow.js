@@ -12,7 +12,7 @@ const StudentRow = ({ stu, index, isReload, setIsReload }) => {
     const handleDelete = id => {
         const isAgree = window.confirm("Are you sure ?");
         if (isAgree) {
-            fetch(`http://localhost:5000/deleteStudent/${id}`, {
+            fetch(`https://arcane-thicket-42090.herokuapp.com/deleteStudent/${id}`, {
                 method: 'delete'
             })
                 .then(res => res.json())

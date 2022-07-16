@@ -7,9 +7,9 @@ const UpdateStudent = () => {
     const { id } = useParams()
     const { register, handleSubmit, reset } = useForm();
     const [student, setStudent] = useState()
-    const url = `http://localhost:5000/student/${id}`;
+    const url = `https://arcane-thicket-42090.herokuapp.com/student/${id}`;
     useEffect(() => {
-        fetch(`http://localhost:5000/student/${id}`)
+        fetch(`https://arcane-thicket-42090.herokuapp.com/student/${id}`)
             .then(res => res.json())
             .then(data => {
                 console.log(data)

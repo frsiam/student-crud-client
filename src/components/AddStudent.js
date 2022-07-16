@@ -6,7 +6,7 @@ const AddStudent = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/student`;
+        const url = `https://arcane-thicket-42090.herokuapp.com/student`;
         fetch(url, {
             method: 'post',
             headers: {
