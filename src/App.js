@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Students />} />
         <Route path='/addnewstudentinfo' element={<AddStudent />} />
+        <Route path='/singleStudent/:id' element={<h1>single</h1>} />
       </Routes>
       <ToastContainer />
     </div>

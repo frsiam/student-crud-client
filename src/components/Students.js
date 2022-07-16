@@ -4,6 +4,7 @@ import StudentRow from './StudentRow';
 
 const Students = () => {
     const [students, setStudents] = useState([]);
+    const [isReload, setIsReload] = useState(false);
     useEffect(() => {
         fetch('http://localhost:5000/students')
             .then(res => res.json())
@@ -14,7 +15,7 @@ const Students = () => {
     }, [])
     return (
         <div className='container my-5'>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">S.N</th>
@@ -26,7 +27,7 @@ const Students = () => {
                 </thead>
                 <tbody>
                     {
-                        students.map((stu, index) => <StudentRow key={index} stu={stu} index={index} />)
+                        students.map((stu, index) => <StudentRow isReload={isReload} setIsReload={setIsReload} key={index} stu={stu} index={index} />)
                     }
                 </tbody>
             </table>
