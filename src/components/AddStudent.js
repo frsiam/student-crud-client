@@ -5,7 +5,6 @@ import { toast } from 'react-toastify';
 const AddStudent = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        console.log(data);
         const url = `https://arcane-thicket-42090.herokuapp.com/student`;
         fetch(url, {
             method: 'post',
@@ -17,7 +16,7 @@ const AddStudent = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    toast.success('New Student Information addedd successfully !!!');
+                    toast.success('Student Information addedd successfully !!!');
                     reset();
                 }
                 else {

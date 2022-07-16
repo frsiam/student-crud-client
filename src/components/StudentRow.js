@@ -6,7 +6,6 @@ const StudentRow = ({ stu, index, isReload, setIsReload }) => {
     // console.log(stu)
     const navigate = useNavigate()
     const handleEdit = (id) => {
-        console.log(id)
         navigate(`singleStudent/${id}`)
     }
     const handleDelete = id => {
@@ -30,10 +29,12 @@ const StudentRow = ({ stu, index, isReload, setIsReload }) => {
             <tr>
                 <th scope="row">{index + 1}</th>
                 <td>{stu.name}</td>
+                <td>{stu.fatherName}</td>
+                <td>{stu.gender}</td>
                 <td>{stu.age}</td>
                 <td>{stu.religion}</td>
                 <td>
-                    <button onClick={() => handleEdit(stu._id)} className="btn btn-warning me-4">Edit</button>
+                    <button onClick={() => handleEdit(stu._id)} className="btn btn-success me-4">Edit</button>
                     <button onClick={() => handleDelete(stu._id)} className="btn btn-danger">Delete</button>
                 </td>
             </tr>

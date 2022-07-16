@@ -20,6 +20,8 @@ const Students = () => {
                     <tr>
                         <th scope="col">S.N</th>
                         <th scope="col">Name</th>
+                        <th scope="col">Father Name</th>
+                        <th scope="col">Gender</th>
                         <th scope="col">Age</th>
                         <th scope="col">Religion</th>
                         <th scope="col">Action</th>
